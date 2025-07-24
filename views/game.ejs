@@ -1,0 +1,43 @@
+<%- include("partials/header") %>
+
+
+    <div class="container card">
+        <h1 class="font-rubik"><%= result%></h1>
+
+        <div class="board font-quicksand">
+            <div>
+                <h3>You</h3>
+                <div class="gestures-box">
+                    <p >
+                    <% if (choice) { %>
+                        <img class="gesture" src="images/<%=choice %>.svg">
+                    <% } else { %>
+                        ❓
+                    <% } %></p>
+                </div>
+                <h2 class="font-rubik"><%= playerScore %></h2>
+            </div>
+            <div>
+                <h3>Computer</h3>
+                <div class="gestures-box">
+                    <% if (choice) { %>
+                        <img class="gesture" src="images/<%=computerChoice%>.svg">
+                    <% } else { %>
+                    <p>❓</p>
+                    <% } %>
+                </div>
+                <h2 class="font-rubik"><%= computerScore %></h2>
+            </div>
+        </div>
+        <div class="container">
+            <!-- when its not picking time disable the buttons (maybe reduce opacity) -->
+            <form method="post">
+                <button class="btn" name="gesture" value="rock"><img class="gesture-pick" src="images/rock.svg" ></button>
+                <button class="btn" name="gesture" value="paper"><img class="gesture-pick" src="images/paper.svg"></button>
+                <button class="btn" name="gesture" value="scissors"><img class="gesture-pick" src="images/scissors.svg"></button>
+            </form>
+
+            <a class="btn reset-btn" href="/play"><img src="images/reset.png"></button>
+        </div>
+    </div>
+

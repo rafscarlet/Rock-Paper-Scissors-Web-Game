@@ -1,0 +1,158 @@
+body {
+    background: linear-gradient(270deg, #48c2c6, #b7e856);
+    /* background-color: darksalmon; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: gradientMove 8s ease infinite;
+    background-size: 300% 300%
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.font-rubik {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.falling-effect {
+    opacity: 0;
+    transform: translateY(-100px);
+
+    animation: fallBounceFade 1s ease forwards;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+.delay-1 {
+  animation-delay: 1.1s; 
+}
+.delay-2 {
+  animation-delay: 2.2s; 
+}
+
+
+@keyframes fallBounceFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.card {
+    margin: 20px;
+    background-color: rgba(202, 241, 236, 0.489);
+    border: 7px double rgba(0, 0, 0, 0.71);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.gesture {
+    width:20rem;
+    height: 20rem;
+}
+
+.gesture-pick {
+    width:7rem;
+}
+
+.gestures-box{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 100px;
+}
+
+.container {
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.hand-svgs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.btn {
+    background-color: #3a170e00;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    filter:
+    drop-shadow(0 0 3px white)
+    drop-shadow(0 0 10px white);
+    transition: filter 0.3s ease;
+}
+
+.start-btn img {
+    width: 200px;
+    height: auto;
+}
+
+.reset-btn img {
+    width: 100px;
+    height: auto;
+}
+
+.board {
+    display: flex;
+    width: inherit;
+    height: 500px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-align: center;
+    font-size: 30px;
+}
+
+form img {
+    padding: 20px;
+}
