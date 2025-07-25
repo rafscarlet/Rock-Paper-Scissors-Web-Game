@@ -14,3 +14,4 @@ The Express server will be available at your localhost port 3000 (localhost:3000
 - [ ] Maybe show the result as a pop up
 - [ ] Add a 3-2-1 timer
 - [ ] Make game mode where it ends at e.g. 10 rounds and shows the winner.
+- [ ] Make it responsive to screen sizes.
